@@ -31,10 +31,10 @@ int isKaprekar(int n) {
   int i;
   long square = n * (long) n;
   int numDigits = (int) log10(n) + 1;
-  long modulus = 0;
+  long modulus = 1;
   long first, second;
   for(i=1; i<=numDigits; i++) {
-    modulous *= 10;
+    modulus *= 10;
     first = square / modulus;
     second = square % modulus;
     if(second > 0 &&
